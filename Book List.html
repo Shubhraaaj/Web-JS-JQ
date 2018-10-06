@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+      <meta charset="utf-8"/>
+      <title>Book List</title>
+  </head>
+  
+  <body id="home">
+      <h1>My Book List</h1>
+  </body>
+
+  <script>
+      var books = [
+        {
+          title: "The Alchemist",
+          author: "Paulo Coelho",
+          cover: "book_1.jpg",
+          alreadyRead: true
+        },
+        {
+          title: "The Monk who sold his Ferrari",
+          author: "Rohit Sharma",
+          cover: "book_2.jpg",
+          alreadyRead: false
+        },
+        {
+          title: "Two States",
+          author: "Chetan Bhagat",
+          cover: "book_3.jpg",
+          alreadyRead: true
+        },
+        {
+          title: "The Great Gatsby",
+          author: "F.Scott Fitzagerald",
+          cover: "book_4.jpg",
+          alreadyRead: false
+        },
+        {
+          title: "The Wings of Fire",
+          author: "APJ Adul Kalam",
+          cover: "book_5.jpg",
+          alreadyRead: false
+        }
+      ];
+      var bookList = document.createElement("ul");
+      for(var i = 0; i < books.length; i++)
+      {
+          var listitem = document.createElement("p");
+          var img = document.createElement("img");
+          img.src = books[i].cover;
+          img.style.width = "80px";
+          img.style.height = "70px";
+          if(books[i].alreadyRead==true)
+          {
+              listitem.style.color = "red";
+          }
+          else
+          {
+              listitem.style.color = "blue";
+          }
+          listitem.innerHTML = "<li>" + books[i].title + " by " +
+          books[i].author + "</li>";
+          document.body.appendChild(img);
+          document.body.appendChild(listitem);
+      }
+      document.body.appendChild(bookList);
+  </script>
+</html>

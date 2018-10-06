@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+  <style>
+    .listitem {
+      color: red;
+    }
+  </style>
+</head>
+<body id="home">
+  <h1>About Me</h1>
+  
+  <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+ </body>
+  <script>
+       document.body.style.fontFamily = 'Arial, sans-serif';
+       document.getElementById("nickname").innerHTML = "Shubhraj";
+       document.getElementById("favorites").innerHTML = "Non-Veg";
+       document.getElementById("hometown").innerHTML = "Dhanbad";
+       var items = document.getElementsByTagName("li");
+       for(var i = 0; i < items.length; i++)
+       {
+          items[i].className = "listitem";
+       }
+       var img = document.createElement("img");
+       img.src = "phone_image.jpg";
+       img.style.width = "300px";
+       img.style.height = "200px"
+       img.style.margin = "10% 0 0 25%"
+       document.body.appendChild(img);
+  </script>
+</html>

@@ -1,0 +1,19 @@
+.callout {
+	border: 20px red;
+	padding: 10px;
+}
+
+body {
+	padding: 10px;
+}
+
+dt {
+	font-weight: bold;
+	margin: 10px 0 0 25px;
+}
+
+dt span{
+	background: green;
+	color: white;
+	padding: 4px;
+}
